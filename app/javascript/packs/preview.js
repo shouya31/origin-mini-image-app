@@ -22,6 +22,13 @@ if (window.location.pathname === '/messages/new') {
       imageElement.appendChild(blobImage)
       imageElement.appendChild(inputHTML)
       ImageList.appendChild(imageElement)
+
+      inputHTML.addEventListener('change', (e) => {
+        file = e.target.files[0];
+        blob = window.URL.createObjectURL(file);
+
+        createImageHTML(blob)
+      })
     }
 
     document.getElementById('message_images').addEventListener('change', function(e){
