@@ -2,6 +2,9 @@
   <%= f.text_field :content, placeholder: 'type a message' %>
   <%= f.file_field :images, name: 'message[images][]' %>
   <%= f.submit '送信' %>
-  <div id="image-list"></div>
+  <div id="image-list">
+    <% @message.images.each do |image| %>
+      <%= image_tag images, class: 'images' %>
+    <% end %>
+  </div>
 <% end %>
-<%= image_tag @message.image, id: 'image' if @message.image.present? %>
