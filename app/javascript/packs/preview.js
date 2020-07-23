@@ -5,6 +5,8 @@ if (window.location.pathname === '/messages/new') {
     const createImageHTML = (blob) => {
        // 画像を表示するためのdiv要素を生成
       const imageElement = document.createElement('div')
+      imageElement.setAttribute('id', "image-element")
+      let imageElementNum = document.querySelectorAll('#image-element')
 
       // 表示する画像を生成
       const blobImage = document.createElement('img')
