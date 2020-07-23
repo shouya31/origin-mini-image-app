@@ -20,6 +20,7 @@ if (window.location.pathname === '/messages/new') {
 
       // 生成したHTMLの要素をブラウザに表示させる
       imageElement.appendChild(blobImage)
+      imageElement.appendChild(inputHTML)
       ImageList.appendChild(imageElement)
     }
 
