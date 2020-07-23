@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('message_image').addEventListener('change', function(e){
-    console.log(123);
+    const file = e.target.files[0];
   });
 });
